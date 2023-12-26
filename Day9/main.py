@@ -6,6 +6,7 @@ programming_dictionary = {
 print(programming_dictionary["Bug"]) # in value của "Bug"
 
 # Thêm 1 mục vào từ điển
+
 programming_dictionary["Loop"] = "The action of doing something over and over again"
 
 # Tạo 1 từ điển mới
