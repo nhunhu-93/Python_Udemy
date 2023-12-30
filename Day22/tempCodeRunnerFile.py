@@ -1,1 +1,1 @@
-ball.move()
+reset_ball
