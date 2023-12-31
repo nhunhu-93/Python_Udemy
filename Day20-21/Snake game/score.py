@@ -11,9 +11,11 @@ class Score(Turtle):
         self.hideturtle()
         self.update_score()
         
+    # Hiển thị điểm số
     def update_score(self):
         self.write(f"Score: {self.score}", align=ALIGNMENT, font=FONT)
         
+    # Tăng điểm số
     def increase_score(self):
         self.clear()
         self.score += 1

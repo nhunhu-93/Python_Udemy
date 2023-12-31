@@ -16,6 +16,7 @@ class Snake:
         for position in STARTING_POSITION:
             self.add_segment(position)
             
+    # Thêm phần tử vào rắn
     def add_segment(self, position):
         turtle = Turtle(shape="square")
         turtle.color("white")
@@ -23,6 +24,7 @@ class Snake:
         turtle.goto(position)
         self.list_square.append(turtle)
         
+    # Mở rộng rắn
     def extend(self):
         self.add_segment(self.list_square[-1].position())
             
