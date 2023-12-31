@@ -36,6 +36,14 @@ class Snake:
             self.list_square[seg_num].goto(new_x, new_y) # đưa hình đến vị trí của hình trước đó
         self.head.forward(MOVE_DISTANCE) # di chuyển hình đầu tiên
         
+    # Đặt rắn về vị trí cũ
+    def reset(self):
+        for i in self.list_square:
+            i.goto(-1200,1200)
+        self.list_square.clear()
+        self.create_snake()
+        self.head = self.list_square[0]
+        
     # Phương thức điều khiển di chuyển
     def up(self):
         if self.head.heading() != DOWN:  # lấy hướng hiện tại của đầu rắn

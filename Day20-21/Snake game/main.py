@@ -36,13 +36,13 @@ while game_is_on:
         
     # Phát hiện va chạm với tường
     if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
-        game_is_on = False
-        score.game_over()
+        score.reset()
+        snake.reset()
         
     # Phát hiện va chạm với đuôi
     for segment in snake.list_square[1:]:
         if snake.head.distance(segment) < 10:
-            game_is_on = False
-            score.game_over()
+            score.reset()
+            snake.reset()
             
 screen.exitonclick()
