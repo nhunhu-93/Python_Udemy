@@ -6,13 +6,12 @@ STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
 
 
-class CarManager(Turtle):
+class CarManager:
     def __init__(self):
-        super().__init__()
         self.list_car = []
-        self.hideturtle()
-        self.penup()
+        self.increment = STARTING_MOVE_DISTANCE
 
+    # Tạo ra một car mới
     def create_car(self):
         random_run = random.randint(1,6)
         if random_run == 1:
@@ -21,9 +20,15 @@ class CarManager(Turtle):
             new_car.shapesize(stretch_wid= 1, stretch_len= 1 * 2)
             new_car.penup()
             start_y = random.randint(-245, 245)
-            new_car.setposition(300, start_y)
+            new_car.setposition(300, start_y) # Đặt vị trí của car
             self.list_car.append(new_car)
         
+    # Di chuyển car
     def move(self):
         for car in self.list_car:
-            car.backward(STARTING_MOVE_DISTANCE)
+            car.backward(self.increment)
+    
+    # Tăng tốc độ car
+    def level_up(self):
+        self.increment += MOVE_INCREMENT
+            
