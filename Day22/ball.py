@@ -6,9 +6,9 @@ class Ball(Turtle):
         self.shape("circle")
         self.color("white")
         self.penup()
-        self.x_move = 10
-        self.y_move = 10
-        self.move_speed = 0.1
+        self.x_move = 10 # Tốc độ di chuyển theo trục x
+        self.y_move = 10 # Tốc độ di chuyển theo trục y
+        self.move_speed = 0.1 # Tốc độ di chuyển của bóng
         
     # di chuyển bóng
     def move(self):
@@ -16,10 +16,11 @@ class Ball(Turtle):
         y_cor = self.ycor()+ self.y_move
         self.goto(x_cor,y_cor)
         
-    # bóng nẩy lại
+    # bóng nẩy lại theo chiều dọc
     def bounce_y(self):
         self.y_move *= -1
         
+    # bóng nẩy lại theo chiều ngang
     def bounce_x(self):
         self.x_move *= -1
         self.move_speed *= 0.9

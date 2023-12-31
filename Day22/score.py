@@ -10,8 +10,9 @@ class Score(Turtle):
         self.color("white")
         self.penup()
         self.score()
-        self.hideturtle()
+        self.hideturtle() # Ẩn turtle đi
         
+    # Hiển thị điểm số
     def score(self):
         self.clear()
         self.setposition(-40,240)
