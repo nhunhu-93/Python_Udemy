@@ -2,7 +2,6 @@ PLACEHOLDER = "[name]"
 
 with open("Day24/Mail Merge Project/Input/Names/invited_names.txt") as data:
     name = data.readlines()
-    print(name)
     
 with open("Day24/Mail Merge Project/Input/Letters/starting_letter.txt") as letters:
     letter_content = letters.read()
