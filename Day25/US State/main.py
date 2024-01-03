@@ -18,12 +18,9 @@ while len(guess_state) < 50:
                                   prompt="What's another State name?").title()
     
     if input_name == "Exit":
-        miss_state = []
-        for state in list_state:
-            if state not in guess_state:
-                miss_state.append(state)
+        miss_state = [state for state in list_state if state not in guess_state]
         new_data = pandas.DataFrame(miss_state)
-        new_data.to_csv("Day25/US State/miss_state_data")
+        new_data.to_csv("Day25/US State/miss_state_data.csv")
         break
     
     for name in list_state:
